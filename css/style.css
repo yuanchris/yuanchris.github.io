@@ -54,16 +54,17 @@
 		margin-right: 10%;
 		margin-top: 30px;
 	}
-	.main-nav .icon {
-		display: none;
-	  }
 
-	.main-nav a {
+	.main-nav a, 
+	.menu a 
+	{
 		font-size: 1.2em;
 		color: rgb(194, 4, 4);	
 
 	}
-	.main-nav a:hover {
+	.main-nav a:hover,
+	.menu a:hover
+	 {
 		color: #3788bb;
 	}
 
@@ -74,10 +75,42 @@
 	
 
 	.main-nav a {display: none;}
+
+
+	.main-nav a.close{
+		display: none;}
+
+
+
 	.main-nav a.icon {
 	  
 	  display: block;
 	}
+
+	.menu{
+		z-index: 2;
+		display: block;
+		position:fixed;
+		top: 0;
+		right: 0;
+		margin: 0%;
+		padding: 0%;
+		width: 20%;
+		height: 100%;
+		background-color: white;
+	  }
+	.menu li{
+		padding: 5px;	
+	  }
+	.menu .close{
+		
+		position: absolute;
+		
+		right: 5%;
+	
+	
+	  }
+	
 
 	
 	.banner {
@@ -111,6 +144,20 @@
 		padding: 0.5em 0;
 		margin-top: 30px;
 	}
+
+	.show {
+		display: 'block';
+		background-color: #3498DB;
+		color: white;
+		text-align: center;
+		padding: 16px;
+		margin: 2rem;
+		font-size: 16px;
+		
+	  }
+
+
+
 /* ================================= 
   Media Queries
 ==================================== */
@@ -128,6 +175,8 @@
 	}
 
 }
+
+
 
 @media (min-width: 800px) {
 
@@ -155,4 +204,11 @@
 		margin:0 auto;
 	}
 
+}
+/* ================================= 
+  hidden content
+==================================== */
+
+.below{
+	display: none;
 }
